@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لخّصها - المعلم الذكي</title>
+    <title>المعلم الذكي - الصف الثالث الابتدائي</title>
     <style>
         :root {
             --primary-blue: #0A2540;
@@ -21,7 +21,7 @@
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--primary-blue);
             color: var(--primary-blue);
             display: flex;
             flex-direction: column;
@@ -31,71 +31,104 @@
 
         /* الترويسة العلوية */
         header {
-            background: linear-gradient(135deg, #0A2540 0%, #1E3A8A 100%);
+            background: var(--primary-blue);
             color: white;
-            padding: 12px 20px;
+            padding: 10px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .header-title {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: bold;
         }
 
         .status-badge {
             background: rgba(255, 255, 255, 0.15);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
             display: flex;
             align-items: center;
             gap: 6px;
         }
 
         .status-dot {
-            width: 8px;
-            height: 8px;
+            width: 7px;
+            height: 7px;
             background-color: #22C55E;
             border-radius: 50%;
         }
 
-        /* شريط التنقل والخيارات */
-        .nav-bar {
-            background: white;
-            padding: 10px 20px;
+        /* شريط اختيار المادة والدرس والقوائم العلوية */
+        .top-selectors {
+            padding: 8px 15px;
             display: flex;
-            gap: 15px;
-            border-bottom: 1px solid var(--border-color);
-            align-items: center;
-            flex-wrap: wrap;
+            gap: 10px;
+            background: var(--primary-blue);
         }
 
-        .nav-btn {
-            background: var(--bg-light);
-            border: 1px solid var(--border-color);
-            padding: 8px 15px;
+        .select-box {
+            flex: 1;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 12px;
             border-radius: 8px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .action-banner {
+            background: white;
+            margin: 0 15px 8px 15px;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-blue);
             font-size: 0.9rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* الأزرار الثلاثة الرئيسية (شرح المعلم، اختبار، حل الواجب) */
+        .nav-tabs {
+            padding: 0 15px 10px 15px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .nav-tab-btn {
+            flex: 1;
+            background: white;
+            border: none;
+            padding: 10px 5px;
+            border-radius: 10px;
+            font-size: 0.85rem;
             color: var(--primary-blue);
             cursor: pointer;
-            transition: all 0.3s;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        .nav-btn.active {
-            background: var(--primary-blue);
-            color: white;
-            border-color: var(--primary-blue);
+        .nav-tab-btn.active {
+            background: #E0F2FE;
+            border: 2px solid var(--accent-sky);
         }
 
-        /* منطقة العمل الرئيسية والسبورة */
+        /* مساحة العمل والسبورة البيضاء */
         .main-workspace {
             flex: 1;
             display: flex;
-            padding: 15px;
-            gap: 15px;
+            padding: 0 15px 10px 15px;
             overflow: hidden;
             position: relative;
         }
@@ -103,43 +136,17 @@
         .whiteboard-container {
             flex: 1;
             background: white;
-            border-radius: 12px;
-            border: 2px solid var(--border-color);
-            padding: 20px;
+            border-radius: 16px;
+            padding: 15px;
             display: flex;
             flex-direction: column;
             position: relative;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            background-image: radial-gradient(#E2E8F0 1px, transparent 1px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background-image: radial-gradient(#E2E8F0 1.5px, transparent 1.5px);
             background-size: 20px 20px;
             overflow-y: auto;
         }
 
-        /* مجسم المعلم الافتراضي الثابت في يسار السبورة */
-        .teacher-avatar-box {
-            position: absolute;
-            left: 20px;
-            bottom: 20px;
-            width: 120px;
-            text-align: center;
-            z-index: 10;
-        }
-
-        .teacher-avatar-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: #E0F2FE;
-            border: 3px solid var(--accent-sky);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin: 0 auto;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        /* محتوى الشرح والأقسام */
         .section-view {
             display: none;
         }
@@ -148,51 +155,103 @@
             display: block;
         }
 
-        .lesson-content {
-            margin-right: 20px;
+        /* محتوى الشرح الافتراضي */
+        .lesson-header {
+            color: var(--primary-blue);
             font-size: 1.1rem;
-            line-height: 1.8;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
-        .interactive-box {
-            margin-top: 15px;
-            padding: 15px;
-            background: #F0FDF4;
-            border: 2px dashed #4ADE80;
-            border-radius: 10px;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-        /* تنسيق أقسام الواجبات والاختبارات */
-        .upload-card, .quiz-card {
-            background: #F8FAFC;
-            border: 2px dashed var(--border-color);
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .btn-primary {
-            background: var(--primary-blue);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            cursor: pointer;
+        .lesson-text {
             font-size: 0.95rem;
-            margin-top: 10px;
+            line-height: 1.8;
+            color: #334155;
+            margin-bottom: 12px;
         }
 
-        /* شريط التفاعل السفلي */
-        .bottom-actions {
+        /* تنسيقات كارد الاختبارات */
+        .quiz-option {
             background: white;
-            padding: 12px 20px;
-            border-top: 1px solid var(--border-color);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .quiz-option.selected {
+            border-color: var(--accent-sky);
+            background: #F0FDF4;
+        }
+
+        /* شريط التفاعل السفلي داخل السبورة أو الواجهة */
+        .bottom-bar {
+            background: white;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .mic-btn-red {
+            background: #EF4444;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .send-btn-blue {
+            background: #0284C7;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mic-btn-green {
+            background: #22C55E;
+            color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input-box-wrapper {
+            flex: 1;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .input-box-wrapper input {
+            width: 100%;
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            outline: none;
+            font-size: 0.85rem;
+            text-align: right;
         }
     </style>
 </head>
@@ -200,7 +259,7 @@
 
     <!-- الترويسة العلوية -->
     <header>
-        <div class="header-title">المعلم الذكي - الصف الخامس الابتدائي</div>
+        <div class="header-title">المعلم الذكي - الصف الثالث الابتدائي</div>
         <div class="status-badge">
             <span class="status-dot"></span>
             جاهز للبدء
@@ -208,92 +267,108 @@
         <div>🤖</div>
     </header>
 
-    <!-- شريط التنقل والخيارات -->
-    <div class="nav-bar">
-        <button class="nav-btn">📖 الرياضيات</button>
-        <button class="nav-btn">📊 المقارنة بين الأعداد</button>
-        <div style="flex-grow: 1;"></div>
-        <button class="nav-btn active" onclick="switchTab('lesson', this)">شرح المعلم</button>
-        <button class="nav-btn" onclick="switchTab('quiz', this)">اختبار إلكتروني</button>
-        <button class="nav-btn" onclick="switchTab('homework', this)">حل الواجب</button>
+    <!-- اختيار المادة والدرس -->
+    <div class="top-selectors">
+        <div class="select-box">
+            <span>2 علاقة القسمة بالضرب</span>
+            <span>▼</span>
+        </div>
+        <div class="select-box">
+            <span>الرياضيات</span>
+            <span>▼</span>
+        </div>
+    </div>
+
+    <!-- زر شرح الدرس البارز -->
+    <div class="action-banner">
+        👨‍🏫 اشرح الدرس
+    </div>
+
+    <!-- الأزرار الثلاثة الرئيسية -->
+    <div class="nav-tabs">
+        <button class="nav-tab-btn" onclick="switchTab('homework', this)">
+            <span>✏️</span> حل الواجب
+        </button>
+        <button class="nav-tab-btn" onclick="switchTab('quiz', this)">
+            <span>📋</span> اختبار إلكتروني
+        </button>
+        <button class="nav-tab-btn active" onclick="switchTab('lesson', this)">
+            <span>👨‍🏫</span> شرح المعلم
+        </button>
     </div>
 
     <!-- مساحة العمل والسبورة -->
     <div class="main-workspace">
         <div class="whiteboard-container">
             
-            <!-- قسم 1: شرح المعلم -->
+            <!-- 1. شاشة شرح المعلم والدرس -->
             <div id="lesson" class="section-view active">
-                <div class="lesson-content">
-                    <h3>الدرس: مقارنة الأعداد - مثال: ٣٥٢ و ٥١٩</h3>
-                    <p style="margin-top: 10px; color: var(--gray-text);">أهلاً بك يا بطل! اليوم سنقارن بين العددين...</p>
-                    
-                    <div class="interactive-box" onclick="alert('أحسنت! إجابة صحيحة.')">
-                        دورك الآن: اضغط على العدد الأكبر في السبورة (٥١٩)
-                    </div>
-                </div>
-            </div>
-
-            <!-- قسم 2: اختبار إلكتروني (متدرج) -->
-            <div id="quiz" class="section-view">
-                <h3>📋 الاختبار الإلكتروني الذكي</h3>
-                <p style="color: var(--gray-text); margin-top: 5px;">اختر مستوى الصعوبة وعدد الأسئلة لبدء التحدي:</p>
-                <div class="quiz-card">
-                    <div style="margin-bottom: 10px;">
-                        <label>مستوى الصعوبة: </label>
-                        <select style="padding: 5px; border-radius: 5px;">
-                            <option>سهل</option>
-                            <option>متوسط</option>
-                            <option>صعب</option>
-                            <option>متنوع (تدرج ذكي)</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 10px;">
-                        <label>عدد الأسئلة: </label>
-                        <select style="padding: 5px; border-radius: 5px;">
-                            <option>5 أسئلة</option>
-                            <option>10 أسئلة</option>
-                            <option>15 سؤالاً</option>
-                            <option>20 سؤالاً</option>
-                        </select>
-                    </div>
-                    <button class="btn-primary" onclick="alert('جاري توليد الاختبار...')">بدء الاختبار الآن</button>
-                </div>
-            </div>
-
-            <!-- قسم 3: حل الواجبات (صور أو نص) -->
-            <div id="homework" class="section-view">
-                <h3>📝 حل الواجبات والأنشطة المدرسية</h3>
-                <p style="color: var(--gray-text); margin-top: 5px;">قم بتصوير السؤال أو كتابته ليقوم المعلم بحله وشرحه لك:</p>
+                <div class="lesson-header">علاقة الضرب بالقسمة</div>
+                <div class="lesson-text">إذا كان لدينا 4 صفوف من الكعك، وفي كل صف 3 قطع، فالعدد الكلي للكعك هو 12.</div>
+                <div style="text-align: center; font-weight: bold; color: var(--primary-blue); margin: 10px 0;">٣ × ٤ = ١٢</div>
                 
-                <div class="upload-card">
-                    <p>📷 اسحب وأفلت صورة السؤال هنا، أو ارفع ملف PDF / صورة من جهازك</p>
-                    <button class="btn-primary">رفع ملف أو صورة</button>
-                </div>
-
-                <div style="margin-top: 15px;">
-                    <textarea placeholder="أو اكتب أو الصق نص السؤال هنا..." style="width: 100%; height: 80px; padding: 10px; border-radius: 8px; border: 1px solid var(--border-color);"></textarea>
-                    <button class="btn-primary" onclick="alert('جاري معالجة السؤال وحله...')">إرسال للحصول على الحل والشرح</button>
-                </div>
+                <div class="lesson-header" style="font-size: 1rem; margin-top: 15px;">كتابة جملة الضرب</div>
+                <div class="lesson-text">نكتب جملة الضرب التي تمثل عدد الصفوف مضروباً في عدد القطع في كل صف ليعطينا العدد الكلي.</div>
+                <div style="text-align: center; font-weight: bold; color: var(--primary-blue); margin: 10px 0;">٣ × ٤ = ١٢</div>
             </div>
 
-            <!-- مجسم المعلم الافتراضي الثابت في أسفل يسار السبورة -->
-            <div class="teacher-avatar-box">
-                <div class="teacher-avatar-img">👨‍🏫</div>
+            <!-- 2. شاشة الاختبار الإلكتروني -->
+            <div id="quiz" class="section-view">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; font-size: 0.85rem; color: var(--gray-text);">
+                    <span>السؤال ٢ من ٥</span>
+                    <span>⭐ ١٠ نقطة</span>
+                    <span>⏱️ ٠٤:٣٨</span>
+                </div>
+                <div style="font-weight: bold; margin-bottom: 15px; font-size: 0.95rem;">
+                    أي جملة ضرب ترتبط بجملة القسمة الآتية؟ ١٢ ÷ ٣ = ٤
+                </div>
+                <div class="quiz-option">أ) ١٢ = ٤ × ٣</div>
+                <div class="quiz-option selected">ب) ٤ = ٣ × ١٢</div>
+                <div class="quiz-option">ج) ٣ = ١٢ × ٤</div>
+                <div class="quiz-option">د) ٤ = ١٢ × ٣</div>
+                
+                <button style="width: 100%; background: #0284C7; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; margin-top: 15px; cursor: pointer;">
+                    تأكيد الإجابة
+                </button>
             </div>
+
+            <!-- 3. شاشة حل الواجب -->
+            <div id="homework" class="section-view">
+                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                    <button style="flex: 1; padding: 8px; background: #F1F5F9; border: 1px solid var(--border-color); border-radius: 8px; font-weight: bold; font-size: 0.85rem;">📷 رفع صورة الواجب</button>
+                    <button style="flex: 1; padding: 8px; background: #E0F2FE; border: 1px solid var(--accent-sky); border-radius: 8px; font-weight: bold; font-size: 0.85rem; color: #0284C7;">⌨️ كتابة السؤال نصياً</button>
+                </div>
+                <div style="border: 2px dashed var(--border-color); border-radius: 12px; padding: 20px; text-align: center;">
+                    <textarea placeholder="مثال: أوجد ناتج جمع الكسرين 1/4 + 2/3 مع توضيح الخطوات..." style="width: 100%; height: 90px; border: none; outline: none; font-size: 0.9rem; resize: none; text-align: right;"></textarea>
+                </div>
+                <button style="width: 100%; background: #0284C7; color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; margin-top: 15px; cursor: pointer;">
+                    ✨ حل السؤال الآن مع الشرح
+                </button>
+            </div>
+
         </div>
     </div>
 
-    <!-- الشريط السفلي -->
-    <div class="bottom-actions">
-        <span style="color: var(--gray-text); font-size: 0.9rem;">المعلم الذكي - متواجد لمساعدتك طوال رحلتك التعليمية</span>
-        <button style="background: #22C55E; color: white; padding: 8px 15px; border-radius: 20px; border: none; cursor: pointer;">🎙️ تحدث مع المعلم</button>
+    <!-- شريط الإدخال والتفاعل السفلي -->
+    <div class="bottom-bar">
+        <button class="mic-btn-red">
+            <span>🎙️</span>
+        </button>
+        <button class="send-btn-blue">
+            <span>➤</span>
+        </button>
+        <div class="input-box-wrapper">
+            <input type="text" placeholder="اكتب سؤالك هنا...">
+        </div>
+        <button class="mic-btn-green">
+            <span>📞</span>
+        </button>
     </div>
 
     <script>
         function switchTab(tabId, btn) {
             document.querySelectorAll('.section-view').forEach(el => el.classList.remove('active'));
-            document.querySelectorAll('.nav-bar .nav-btn').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
             btn.classList.add('active');
         }
