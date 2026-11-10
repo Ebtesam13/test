@@ -10,13 +10,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
---navy-950:#00162E;--navy-900:#012448;--navy-800:#0B3A6B;--navy-700:#174F8A;--navy-100:#E2EBF5;--navy-50:#F1F6FB;
---sky-800:#0B4F7D;--sky-700:#0F6FA8;--sky-600:#2FA8E8;--sky-500:#5EC6F8;--sky-400:#7FD2FA;--sky-300:#A9DEFB;--sky-100:#DDF2FE;--sky-50:#F0FAFF;--ice:#EAF5FD;
---amber-800:#8A4B05;--amber-600:#E89A0C;--amber-500:#FFB020;--amber-400:#FFC24D;--amber-100:#FFF4DC;
---white:#FFFFFF;--gray-50:#F7FAFD;--gray-100:#EEF3F9;--gray-150:#E6ECF3;--gray-200:#DCE6F0;--gray-300:#B8C9DB;--gray-400:#7C8CA0;--gray-600:#52667D;--gray-800:#2A3B52;--on-dark-muted:#B9D3EA;
+--navy-950:#04245A;--navy-900:#0B4C9C;--navy-800:#1260B5;--navy-700:#1873C9;--navy-100:#DCEBFA;--navy-50:#EEF6FD;
+--sky-800:#0A6AB0;--sky-700:#0680D2;--sky-600:#0196E8;--sky-500:#38B0F2;--sky-400:#74CAF7;--sky-300:#A8E3F8;--sky-100:#DDF2FD;--sky-50:#F0F9FF;--ice:#EAF6FE;
+--amber-800:#0A6AB0;--amber-600:#1A9FEA;--amber-500:#6AC6F6;--amber-400:#94D8FA;--amber-100:#E3F4FE;
+--white:#FFFFFF;--gray-50:#F6FAFE;--gray-100:#EEF3F9;--gray-150:#E6ECF3;--gray-200:#DCE6F0;--gray-300:#B8C9DB;--gray-400:#7C8CA0;--gray-600:#52667D;--gray-800:#2A3B52;--on-dark-muted:#BEE0F8;
 --success-bg:#E6F6EF;--success-bd:#A8DEC5;--success-text:#0F6B4C;--error-bg:#FDECEC;--error-bd:#F2B8B8;--error-text:#B42F2F;--info-bg:#E1F4FE;--info-bd:#A9DEFB;--info-text:#0F5F90;
 --bg-page:var(--white);--bg-alt:var(--gray-50);--bg-tint:var(--ice);--bg-highlight:var(--sky-100);--bg-dark:var(--navy-900);--bg-darkest:var(--navy-950);--bg-card:var(--white);--bg-card-featured:var(--sky-50);
---border:var(--gray-200);--border-strong:var(--gray-300);--border-featured:var(--sky-300);--border-on-dark:rgba(255,255,255,.14);--shadow-pop:0 8px 20px rgba(1,36,72,.16);
+--border:var(--gray-200);--border-strong:var(--gray-300);--border-featured:var(--sky-300);--border-on-dark:rgba(255,255,255,.14);--shadow-pop:0 8px 20px rgba(11,76,156,.16);
 --text-heading:var(--navy-900);--text-subheading:var(--navy-800);--text-body:var(--gray-800);--text-muted:var(--gray-600);--text-link:var(--sky-700);--text-link-hover:var(--sky-800);--text-on-dark:var(--white);--text-on-dark-muted:var(--on-dark-muted);--text-on-dark-accent:var(--sky-500);
 --focus-ring:3px solid var(--sky-700);
 --btn-primary-bg:var(--navy-900);--btn-primary-hover:var(--navy-800);--btn-primary-active:var(--navy-950);--btn-primary-fg:var(--white);
@@ -25,8 +25,8 @@
 --btn-outline-border:var(--navy-900);--btn-outline-hover:var(--navy-50);--btn-outline-active:var(--navy-100);
 --btn-ghost-fg:var(--sky-700);--btn-ghost-hover-bg:var(--sky-50);--btn-ghost-active-bg:var(--sky-100);
 --btn-disabled-bg:var(--gray-150);--btn-disabled-fg:var(--gray-400);
---grad-hero:radial-gradient(circle at 12% 18%,rgba(94,198,248,.28),transparent 55%),linear-gradient(135deg,#00162E 0%,#012448 55%,#0B3A6B 100%);
---grad-glow:radial-gradient(circle,rgba(94,198,248,.35),transparent 65%);
+--grad-hero:radial-gradient(circle at 12% 18%,rgba(56,176,242,.28),transparent 55%),linear-gradient(135deg,#04245A 0%,#0B4C9C 55%,#0F65BD 100%);
+--grad-glow:radial-gradient(circle,rgba(56,176,242,.35),transparent 65%);
 --r:20px}
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -60,21 +60,21 @@ header{position:sticky;top:0;z-index:50;background:var(--bg-page);border-bottom:
 .burger{display:none}
 .hero{background:var(--grad-hero);color:var(--text-on-dark);padding:72px 0 0;position:relative;overflow:hidden}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
-.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(94,198,248,.14);border:1px solid rgba(94,198,248,.35);color:var(--text-on-dark-accent);padding:2px 16px;border-radius:999px;font-weight:700;font-size:14px;direction:rtl}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(56,176,242,.14);border:1px solid rgba(56,176,242,.35);color:var(--text-on-dark-accent);padding:2px 16px;border-radius:999px;font-weight:700;font-size:14px;direction:rtl}
 .hero h1{font-size:clamp(34px,5vw,60px);line-height:1.3;font-weight:800;margin:18px 0 14px}
 .hero h1 em{font-style:normal;color:var(--text-on-dark-accent)}
 .hero p{color:var(--text-on-dark-muted);font-size:18px;max-width:560px}
 .hero .cta{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
 .hero::before,.hero::after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(60px);animation:drift 14s ease-in-out infinite alternate}
-.hero::before{width:380px;height:380px;background:rgba(94,198,248,.22);top:-120px;inset-inline-start:-80px}
-.hero::after{width:320px;height:320px;background:rgba(23,79,138,.55);bottom:40px;inset-inline-end:-60px;animation-delay:-6s}
+.hero::before{width:380px;height:380px;background:rgba(56,176,242,.22);top:-120px;inset-inline-start:-80px}
+.hero::after{width:320px;height:320px;background:rgba(24,115,201,.55);bottom:40px;inset-inline-end:-60px;animation-delay:-6s}
 @keyframes drift{to{transform:translate(40px,30px) scale(1.15)}}
 .hero .wrap{position:relative;z-index:1}
 .rot{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:700;font-size:18px;color:var(--text-on-dark-muted)}
 .rot b{display:inline-block;min-width:150px;color:var(--navy-900);background:var(--sky-500);border-radius:10px;padding:0 14px;transition:.4s}
 .rot b.sw{opacity:0;translate:0 8px}
 .orb{position:relative;width:min(470px,100%);aspect-ratio:1;margin:auto}
-.orb .rg{position:absolute;inset:11%;border:1.5px dashed rgba(94,198,248,.4);border-radius:50%;animation:spin 60s linear infinite}
+.orb .rg{position:absolute;inset:11%;border:1.5px dashed rgba(56,176,242,.4);border-radius:50%;animation:spin 60s linear infinite}
 .orb .rg2{inset:27%;border-style:solid;border-color:var(--border-on-dark);animation-duration:40s;animation-direction:reverse}
 .spin{position:absolute;inset:0;animation:spin 36s linear infinite}
 .tl{position:absolute;width:23%;aspect-ratio:1;translate:-50% -50%;border-radius:24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;box-shadow:var(--shadow-pop);animation:spin 36s linear infinite reverse;text-align:center}
@@ -84,7 +84,7 @@ header{position:sticky;top:0;z-index:50;background:var(--bg-page);border-bottom:
 .core{position:absolute;inset:32%;border-radius:50%;background:var(--sky-500);color:var(--navy-900);display:grid;place-items:center;text-align:center;font-weight:800;line-height:1.35;animation:pulse 3.2s ease-in-out infinite;z-index:1}
 .core svg{width:34px;height:34px;stroke:var(--navy-900);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin:0 auto 2px}
 .core div{font-size:15px}
-@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(94,198,248,.5)}50%{box-shadow:0 0 0 26px rgba(94,198,248,0)}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(56,176,242,.5)}50%{box-shadow:0 0 0 26px rgba(56,176,242,0)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 .bb{position:absolute;z-index:2;background:var(--navy-950);border:1px solid var(--border-on-dark);border-radius:16px;padding:6px 14px;font-size:13.5px;font-weight:600;color:var(--white);box-shadow:var(--shadow-pop);animation:fl 5s ease-in-out infinite}
 .bb.q{inset-inline-end:-2%;bottom:14%}.bb.a{inset-inline-start:-4%;top:12%;background:var(--white);color:var(--navy-900);animation-delay:-2.5s}
@@ -126,13 +126,13 @@ section{padding:84px 0}
 .zone{position:relative;border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;display:block;border:1px solid var(--border);transition:.3s;background:var(--bg-highlight)}
 .zone:hover{transform:translateY(-4px);box-shadow:var(--shadow-pop)}
 .zone .cov{position:absolute;inset:0;aspect-ratio:auto;border:0}
-.zone .ov{position:absolute;inset:auto 0 0;padding:44px 20px 18px;background:linear-gradient(0deg,var(--navy-950) 10%,rgba(0,22,46,.75) 55%,transparent);color:var(--white);display:flex;align-items:end;justify-content:space-between;gap:10px}
+.zone .ov{position:absolute;inset:auto 0 0;padding:44px 20px 18px;background:linear-gradient(0deg,var(--navy-950) 10%,rgba(4,36,90,.75) 55%,transparent);color:var(--white);display:flex;align-items:end;justify-content:space-between;gap:10px}
 .zone h3{font-size:20px;color:var(--white)}
 .zone .go{background:var(--white);color:var(--navy-900);font-weight:700;font-size:13.5px;border-radius:999px;padding:0 14px;display:inline-flex;gap:6px;align-items:center;white-space:nowrap}
 .zone:hover .go{background:var(--sky-500)}
 .cov{background:var(--bg-highlight);display:grid;place-items:center;color:var(--navy-800);position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
 .cov img{width:100%;height:100%;object-fit:cover}
-.gl{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;line-height:1;background-image:radial-gradient(rgba(1,36,72,.09) 1.5px,transparent 1.6px);background-size:18px 18px}
+.gl{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;line-height:1;background-image:radial-gradient(rgba(11,76,156,.09) 1.5px,transparent 1.6px);background-size:18px 18px}
 .gl span{font-size:clamp(56px,9vw,96px)}
 .gl.a{background-color:var(--sky-100);color:var(--navy-900)}.gl.b{background-color:var(--navy-800);color:var(--sky-500);background-image:radial-gradient(rgba(255,255,255,.1) 1.5px,transparent 1.6px)}.gl.c{background-color:var(--sky-500);color:var(--navy-900)}.gl.d{background-color:var(--ice);color:var(--sky-700)}
 .cov>svg{width:48px;height:48px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;opacity:.8}
@@ -294,7 +294,7 @@ header::after{content:"";position:absolute;inset:auto 26px 0;height:3px;border-r
 .hd2{position:relative}
 .hd2 .kick{color:var(--navy-700)}.hd2 .kick::before{content:"";width:34px;height:3px;border-radius:2px;background:var(--amber-500)}
 .hd2 h2 em{color:var(--sky-700);text-decoration:underline wavy var(--amber-500) 3px;text-underline-offset:.26em;text-decoration-skip-ink:none}
-.hd2::before{content:"";position:absolute;inset-inline-end:0;top:-6px;width:120px;height:90px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'%3E%3Ccircle cx='22' cy='24' r='14' fill='%232FA8E8' opacity='.35'/%3E%3Crect x='56' y='40' width='28' height='28' rx='7' fill='none' stroke='%23FFB020' stroke-width='4' transform='rotate(14 70 54)'/%3E%3Cpath d='M96 8l14 24H82z' fill='%23012448' opacity='.12'/%3E%3C/svg%3E") no-repeat center/contain}
+.hd2::before{content:"";position:absolute;inset-inline-end:0;top:-6px;width:120px;height:90px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'%3E%3Ccircle cx='22' cy='24' r='14' fill='%230196E8' opacity='.35'/%3E%3Crect x='56' y='40' width='28' height='28' rx='7' fill='none' stroke='%236AC6F6' stroke-width='4' transform='rotate(14 70 54)'/%3E%3Cpath d='M96 8l14 24H82z' fill='%230B4C9C' opacity='.12'/%3E%3C/svg%3E") no-repeat center/contain}
 .hd3 .kick{background:var(--navy-900);color:var(--white);border-radius:10px 10px 10px 3px;padding:1px 14px 1px 12px}.hd3 .kick .ki{color:var(--amber-400)}
 .hd3 h2 em{background:var(--navy-900);color:var(--sky-500);padding:0 .28em;border-radius:.3em;display:inline-block;rotate:-2deg;line-height:1.2}
 .hd3::after{content:"";width:84px;height:84px;align-self:center;border:3px dashed var(--sky-300);border-radius:50%;box-shadow:inset 0 0 0 14px var(--sky-50)}
@@ -303,7 +303,7 @@ header::after{content:"";position:absolute;inset:auto 26px 0;height:3px;border-r
 .hd4 h2 em{color:var(--sky-700);text-decoration:underline dotted var(--amber-500) 4px;text-underline-offset:.22em}
 .hd5 .kick{border:1.5px solid var(--navy-900);color:var(--navy-900);border-radius:999px;padding:1px 14px 1px 12px}
 .hd5 h2 em{background:var(--amber-500);color:var(--navy-950);padding:0 .3em;border-radius:.3em;display:inline-block;rotate:1.5deg;line-height:1.25}
-.hd6 .kick{background:rgba(94,198,248,.14);border:1px solid rgba(94,198,248,.35);border-radius:999px;padding:1px 14px 1px 12px}
+.hd6 .kick{background:rgba(56,176,242,.14);border:1px solid rgba(56,176,242,.35);border-radius:999px;padding:1px 14px 1px 12px}
 .hd6 h2 em{background:linear-gradient(90deg,var(--sky-500),var(--sky-300));-webkit-background-clip:text;background-clip:text;color:transparent}
 @media(max-width:900px){.hd1::after,.hd3::after,.hd2::before{display:none}}
 /* cards */
@@ -312,7 +312,7 @@ header::after{content:"";position:absolute;inset:auto 26px 0;height:3px;border-r
 .z{display:inline-flex;align-items:center;gap:6px}.z .mi{width:15px;height:15px}
 .bdg .mi{width:13px;height:13px}
 .bdg.live::before{display:none}.bdg.live .mi{animation:p 1.4s infinite}
-.bdg.new{background:linear-gradient(135deg,var(--amber-400),var(--amber-500));box-shadow:0 4px 10px rgba(232,154,12,.35)}
+.bdg.new{background:linear-gradient(135deg,var(--amber-400),var(--amber-500));box-shadow:0 4px 10px rgba(1,150,232,.35)}
 .meta{gap:8px}.meta span{display:inline-flex;align-items:center;gap:6px;background:var(--bg-alt);border:1px solid var(--border);border-radius:10px;padding:1px 10px;font-weight:600}.meta .mi{color:var(--sky-700);width:15px;height:15px}
 .subj small{display:inline-flex;align-items:center;gap:6px}.subj small .mi{width:14px;height:14px;color:var(--sky-700)}
 .pr .price{background:linear-gradient(135deg,var(--sky-50),var(--sky-100));border:1px solid var(--border-featured);border-radius:16px;padding:8px 14px 8px 12px;align-items:center;gap:6px}
@@ -324,6 +324,45 @@ header::after{content:"";position:absolute;inset:auto 26px 0;height:3px;border-r
 .cp.fr{display:flex;align-items:center;gap:8px;color:var(--success-text);font-weight:700;font-size:13.5px}.cp.fr .mi{width:18px;height:18px}
 .gl svg{width:clamp(56px,9vw,96px);height:auto;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
 .lat .pr{margin-top:6px}.lat .go{padding-top:6px}
+
+/* identity: azure disc with pale ring */
+.ico{width:54px;height:54px;border-radius:50%;background:var(--sky-600);border:0;color:var(--white);box-shadow:0 0 0 7px var(--sky-300);margin:7px 7px 16px}
+.feat:hover .ico{background:var(--navy-900);color:var(--white)}
+.feat:nth-child(1) .ico,.feat:nth-child(4) .ico{box-shadow:0 0 0 7px rgba(168,227,248,.45)}.feat:nth-child(4) .ico{background:var(--sky-600);color:var(--white)}
+.pi{border-radius:50%;background:var(--sky-600);color:var(--white);box-shadow:0 0 0 4px var(--sky-300)}
+.bdg.zone-badge{background:var(--navy-900);color:var(--white);border-color:var(--navy-900);max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.bdg.zone-badge .mi{color:var(--sky-300)}
+.zone .ov{flex-direction:column;align-items:flex-start;gap:10px}
+.zone h3{font-size:20px;white-space:nowrap;text-wrap:nowrap}
+@media(max-width:640px){.zone h3{white-space:normal;text-wrap:balance;font-size:16px}}
+
+/* heading icons: azure disc + pale ring (brand motif) */
+.ki{width:36px;height:36px;border-radius:50%;background:var(--sky-600);color:var(--white);box-shadow:0 0 0 4px var(--sky-300);margin-inline-end:4px;flex:none}
+.ki svg{width:19px;height:19px}
+.sh .kick,.st .kick{gap:10px}
+.hd1 .kick,.hd3 .kick,.hd5 .kick,.hd6 .kick{padding-block:5px;padding-inline:7px 18px}
+.hd3 .kick .ki{color:var(--white)}
+.hd6 .ki{box-shadow:0 0 0 4px rgba(168,227,248,.4)}
+/* mobile / tablet */
+@media(max-width:900px){
+.hero .wrap>div:first-child{display:flex;flex-direction:column;align-items:center;text-align:center}
+.hero p{margin-inline:auto}.hero .cta{justify-content:center}.rot{justify-content:center}
+.orb{margin-inline:auto}
+.menu{transform:translateY(calc(-100% - 140px));visibility:hidden;opacity:0;pointer-events:none;transition:transform .3s,opacity .3s,visibility 0s .3s}
+.menu.open{transform:none;visibility:visible;opacity:1;pointer-events:auto;transition:transform .3s,opacity .3s}
+.menu a{display:block;padding:25px 16px;border-radius:12px}}
+
+/* features: 1 per row on phones, 2 on tablets, 3 on desktop */
+.feats{grid-template-columns:repeat(3,1fr);gap:18px}
+.feats .feat:nth-child(n){grid-column:auto;min-height:210px;padding:26px}
+.feats .feat:nth-child(4){grid-column:1/-1;min-height:0;display:grid;grid-template-columns:auto 1fr;column-gap:24px;align-items:center}
+.feats .feat:nth-child(4) .ico{grid-row:1/3;margin:7px}.feats .feat:nth-child(4) h3{margin-top:0}
+@media(max-width:1024px){
+.feats{grid-template-columns:repeat(2,1fr)}
+.feats .feat:nth-child(4){grid-column:auto;display:flex}
+.feats .feat:nth-child(4) .ico{margin:7px 7px auto}.feats .feat:nth-child(4) h3{margin-top:22px}}
+@media(max-width:640px){
+.feats{grid-template-columns:1fr}
+.feats .feat:nth-child(n){min-height:0}.feat .ico{margin-bottom:16px}.feat h3{margin-top:0}}
 </style>
 </head>
 <body>
@@ -367,7 +406,7 @@ header::after{content:"";position:absolute;inset:auto 26px 0;height:3px;border-r
 <div class="bb q"><span class="dots"><i></i><i></i><i></i></span></div>
 </div>
 </div>
-<svg class="edge" viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0 56V26C180 0 360 0 540 20s360 36 540 14S1300 6 1440 20v36z" fill="#EAF5FD"/></svg>
+<svg class="edge" viewBox="0 0 1440 56" preserveAspectRatio="none"><path d="M0 56V26C180 0 360 0 540 20s360 36 540 14S1300 6 1440 20v36z" fill="#EAF6FE"/></svg>
 </div>
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
 
@@ -450,21 +489,21 @@ header::after{content:"";position:absolute;inset:auto 26px 0;height:3px;border-r
 window.ZONE_CONFIG=window.ZONE_CONFIG||{couponUrl:"",cartUrl:"",buyUrl:""};
 window.ZONE_DATA=window.ZONE_DATA||{
 latest:[
-{id:101,kind:"class",type:"live",title:"الصف الثالث الثانوي – المسار العلمي",desc:"تغطية كاملة وشاملة لجميع مواد المسار العلمي المعتمدة مع اختبارات قياسية ومتابعة مستمرة.",stage:"المرحلة الثانوية",subjLabel:"المواد المشمولة",subjects:["الرياضيات","الفيزياء","الكيمياء"],price:340,glyph:"π",tone:"b",url:"#",isNew:true},
-{id:102,kind:"course",type:"live",title:"برنامج التأسيس اللغوي المزدوج",desc:"إتقان مهارات القواعد والنطق والمحادثة المتقدمة بتطبيق تفاعلي مكثف.",subjLabel:"المحاور المتضمنة",subjects:["الإنجليزية","العربية","التحدث"],price:220,glyph:"Aa",tone:"c",url:"#",isNew:true},
-{id:103,kind:"class",type:"recorded",title:"الصف الأول المتوسط – البرنامج الكامل",desc:"شرح متكامل لجميع المقررات الدراسية الأساسية مع أوراق عمل وبنك أسئلة وزاري.",stage:"المرحلة المتوسطة",subjLabel:"المواد المشمولة",subjects:["الرياضيات","العلوم","لغتي"],price:180,glyph:"π",tone:"a",url:"#",isNew:true},
-{id:104,kind:"course",type:"recorded",title:"برنامج إتقان لغة القرآن والكتابة",desc:"منهج متكامل يزيل عقدة النحو والإعراب ويضمن كتابة صحيحة خالية من الأخطاء.",subjLabel:"المحاور المتضمنة",subjects:["الإملاء","النحو","الخط العربي"],price:0,glyph:"ع",tone:"d",url:"#",isNew:true}],
+{id:101,kind:"class",type:"live",title:"الصف الثالث الثانوي – المسار العلمي",stage:"المرحلة الثانوية",subjLabel:"المواد المشمولة",subjects:["الرياضيات","الفيزياء","الكيمياء"],price:340,glyph:"π",tone:"b",url:"#",isNew:true},
+{id:102,kind:"course",type:"live",title:"برنامج التأسيس اللغوي المزدوج",subjLabel:"المحاور المتضمنة",subjects:["الإنجليزية","العربية","التحدث"],price:220,glyph:"Aa",tone:"c",url:"#",isNew:true},
+{id:103,kind:"class",type:"recorded",title:"الصف الأول المتوسط – البرنامج الكامل",stage:"المرحلة المتوسطة",subjLabel:"المواد المشمولة",subjects:["الرياضيات","العلوم","لغتي"],price:180,glyph:"π",tone:"a",url:"#",isNew:true},
+{id:104,kind:"course",type:"recorded",title:"برنامج إتقان لغة القرآن والكتابة",subjLabel:"المحاور المتضمنة",subjects:["الإملاء","النحو","الخط العربي"],price:0,glyph:"ع",tone:"d",url:"#",isNew:true}],
 zones:[{id:1,name:"زون اللغة الإنجليزية",glyph:"Aa",tone:"c",img:"",url:"#"},{id:2,name:"زون الرياضيات",glyph:"π",tone:"b",img:"",url:"#"},{id:3,name:"زون اللغة العربية",glyph:"ض",tone:"a",img:"",url:"#"},{id:4,name:"زون العلوم",glyph:"H₂O",tone:"d",img:"",url:"#"},{id:5,name:"زون القدرات العامة",icon:"target",tone:"b",img:"",url:"#"},{id:6,name:"زون التحصيلي",icon:"award",tone:"c",img:"",url:"#"}],
 classes:[
-{id:11,type:"live",title:"الصف الثالث الثانوي",desc:"المسار العلمي والمسارات التخصصية",stage:"المرحلة الثانوية",glyph:"π",tone:"b",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات المطورة","الفيزياء المتقدمة","الكيمياء العامة","الأحياء والبيئة"],price:350,duration:"ترم كامل",isNew:true,url:"#"},
-{id:12,type:"live",title:"الصف الأول المتوسط",desc:"الفصل الدراسي الكامل لمقررات الوزارة",stage:"المرحلة المتوسطة",glyph:"π",tone:"a",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات","العلوم المتكاملة","لغتي الخالدة","اللغة الإنجليزية"],price:260,duration:"ترم كامل",isNew:true,url:"#"},
-{id:13,type:"live",title:"الصف الثاني المتوسط",desc:"خطة دراسية شاملة لكافة مقررات العام",stage:"المرحلة المتوسطة",glyph:"Aa",tone:"c",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات","العلوم","اللغة الإنجليزية","لغتي الخالدة"],price:260,duration:"ترم كامل",url:"#"},
-{id:14,type:"mixed",title:"الصف السادس الابتدائي",desc:"التأسيس المتين والانتقال إلى المرحلة المتوسطة",stage:"المرحلة الابتدائية",glyph:"ع",tone:"d",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات","العلوم","لغتي الجميلة","اللغة الإنجليزية"],price:190,duration:"ترم كامل",url:"#"}],
+{id:11,zone:"زون الرياضيات",type:"live",title:"الصف الثالث الثانوي",stage:"المرحلة الثانوية",glyph:"π",tone:"b",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات المطورة","الفيزياء المتقدمة","الكيمياء العامة","الأحياء والبيئة"],price:350,duration:"ترم كامل",isNew:true,url:"#"},
+{id:12,zone:"زون الرياضيات",type:"live",title:"الصف الأول المتوسط",stage:"المرحلة المتوسطة",glyph:"π",tone:"a",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات","العلوم المتكاملة","لغتي الخالدة","اللغة الإنجليزية"],price:260,duration:"ترم كامل",isNew:true,url:"#"},
+{id:13,zone:"زون اللغة الإنجليزية",type:"live",title:"الصف الثاني المتوسط",stage:"المرحلة المتوسطة",glyph:"Aa",tone:"c",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات","العلوم","اللغة الإنجليزية","لغتي الخالدة"],price:260,duration:"ترم كامل",url:"#"},
+{id:14,zone:"زون اللغة العربية",type:"mixed",title:"الصف السادس الابتدائي",stage:"المرحلة الابتدائية",glyph:"ع",tone:"d",subjLabel:"المقررات المشمولة في البرنامج",subjects:["الرياضيات","العلوم","لغتي الجميلة","اللغة الإنجليزية"],price:190,duration:"ترم كامل",url:"#"}],
 courses:[
-{id:21,type:"recorded",title:"برنامج تأسيس الطفل الشامل",desc:"بناء المهارات الأساسية المتكاملة للطفل",glyph:"Aa",tone:"b",subjLabel:"المواد المتضمنة في الدورة",subjects:["اللغة العربية (القراءة والكتابة)","اللغة الإنجليزية (الحروف والصوتيات)","الرياضيات والعمليات الأساسية"],price:180,lessons:"32 درس تفاعلي",url:"#"},
-{id:22,type:"recorded",title:"دورة التأسيس الأكاديمي المزدوج",desc:"تأسيس متزامن للغتين العربية والإنجليزية",zone:"اللغات والآداب",glyph:"Aa",tone:"c",subjLabel:"المواد المتضمنة في الدورة",subjects:["قواعد ونطق الإنجليزية","القراءة السريعة والفهم","مهارات الكتابة والإنشاء"],price:150,lessons:"24 درس مسجل وتفاعلي",url:"#"},
-{id:23,type:"recorded",title:"برنامج إتقان لغة القرآن والكتابة",desc:"إتقان النحو والإملاء والتعبير البلاغي",zone:"زون العربية",glyph:"ع",tone:"d",subjLabel:"المواد المتضمنة في البرنامج",subjects:["النحو والإعراب المبسط","الإملاء وعلامات الترقيم","البلاغة والتذوق الأدبي"],price:0,isNew:true,url:"#"},
-{id:24,type:"recorded",title:"دورة تقوية المهارات العلمية والرياضية",desc:"التدريب المكثف على التفكير التحليلي وحل المسائل",zone:"العلوم والرياضيات",glyph:"π",tone:"a",subjLabel:"المواد المتضمنة في الدورة",subjects:["الجبر والهندسة التحليلية","المفاهيم الفيزيائية التطبيقية","التفكير المنطقي والقدرات"],price:210,lessons:"28 درس مكثف",url:"#"}],
+{id:21,zone:"زون اللغة الإنجليزية",type:"recorded",title:"برنامج تأسيس الطفل الشامل",glyph:"Aa",tone:"b",subjLabel:"المواد المتضمنة في الدورة",subjects:["اللغة العربية (القراءة والكتابة)","اللغة الإنجليزية (الحروف والصوتيات)","الرياضيات والعمليات الأساسية"],price:180,lessons:"32 درس تفاعلي",url:"#"},
+{id:22,zone:"زون اللغة الإنجليزية",type:"recorded",title:"دورة التأسيس الأكاديمي المزدوج",glyph:"Aa",tone:"c",subjLabel:"المواد المتضمنة في الدورة",subjects:["قواعد ونطق الإنجليزية","القراءة السريعة والفهم","مهارات الكتابة والإنشاء"],price:150,lessons:"24 درس مسجل وتفاعلي",url:"#"},
+{id:23,zone:"زون اللغة العربية",type:"recorded",title:"برنامج إتقان لغة القرآن والكتابة",glyph:"ع",tone:"d",subjLabel:"المواد المتضمنة في البرنامج",subjects:["النحو والإعراب المبسط","الإملاء وعلامات الترقيم","البلاغة والتذوق الأدبي"],price:0,isNew:true,url:"#"},
+{id:24,zone:"زون الرياضيات",type:"recorded",title:"دورة تقوية المهارات العلمية والرياضية",glyph:"π",tone:"a",subjLabel:"المواد المتضمنة في الدورة",subjects:["الجبر والهندسة التحليلية","المفاهيم الفيزيائية التطبيقية","التفكير المنطقي والقدرات"],price:210,lessons:"28 درس مكثف",url:"#"}],
 testimonials:[],partners:[],cta:null,faq:[]};
 (function(){
 document.documentElement.classList.add("js");
@@ -475,12 +514,13 @@ function esc(t){return String(t==null?"":t).replace(/[&<>"]/g,function(c){return
 var P={cap:'<path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/>',layers:'<path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/>',zone:'<path d="M12 2l8.5 5v10L12 22l-8.5-5V7z"/>',live:'<circle cx="12" cy="12" r="2"/><path d="M7.8 7.8a6 6 0 000 8.4M16.2 7.8a6 6 0 010 8.4M4.9 4.9a10 10 0 000 14.2M19.1 4.9a10 10 0 010 14.2"/>',play:'<circle cx="12" cy="12" r="9"/><path d="M10 8.5l5.5 3.5-5.5 3.5z"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',cal:'<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/>',tag:'<path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.2"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',book:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19a2 2 0 012-2h13"/>',gift:'<path d="M20 12v9H4v-9M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 110-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 100-5C13 2 12 7 12 7z"/>',check:'<path d="M5 12.5l4.5 4.5L19 7"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2"/>',award:'<circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/>'};
 function I(n){return'<svg class="mi" viewBox="0 0 24 24" aria-hidden="true">'+P[n]+'</svg>'}
 var newB='<span class="bdg new">'+I('star')+'جديد</span>',PI='<span class="pi">'+I('tag')+'</span>';
-function tagRow(i,k){k=k||i.kind;return'<div class="tagrow"><span class="kd">'+(k==="class"?I('cap')+esc(i.stage||'صف دراسي'):I('book')+'دورة')+'</span>'+(i.zone?'<span class="z">'+I('zone')+esc(i.zone)+'</span>':'')+'</div>'}
+function tagRow(i,k){k=k||i.kind;return'<div class="tagrow"><span class="kd">'+(k==="class"?I('cap')+esc(i.stage||'صف دراسي'):I('book')+'دورة')+'</span>'+'</div>'}
 function csrf(){var m=document.querySelector('meta[name=csrf-token]');return m?m.content:""}
 function cover(i){return i.img?'<img src="'+esc(i.img)+'" alt="'+esc(i.title||i.name||"")+'" loading="lazy">':(i.glyph?'<div class="gl '+(i.tone||'a')+'"><span>'+esc(i.glyph)+'</span></div>':i.icon?'<div class="gl '+(i.tone||'a')+'"><svg viewBox="0 0 24 24">'+P[i.icon]+'</svg></div>':cap)}
+function zoneBadge(i){return i.zone?'<span class="bdg zone-badge">'+I('zone')+esc(i.zone)+'</span>':'<span></span>'}
 function typeB(i){var t=i.type,l=t==="live",x=t==="mixed";return'<span class="bdg '+(l?'live':'rec')+'">'+I(l||x?'live':'play')+(l?'مباشر':x?'مباشر ومسجل':'مسجل')+'</span>'}
 g("latest-grid").innerHTML=(D.latest||[]).map(function(i){
-return'<a class="lat" href="'+esc(i.url)+'"><div class="cov">'+cover(i)+'<div class="badges">'+typeB(i)+(i.isNew?newB:'')+'</div></div><div class="in">'+tagRow(i)+'<h3>'+esc(i.title)+'</h3>'+subjHtml(i,3,false)+(i.desc?'<p>'+esc(i.desc)+'</p>':'')+'<div class="pr">'+priceHtml(i)+'</div><span class="go">اكتشف التفاصيل '+arrow+'</span></div></a>'}).join("");
+return'<a class="lat" href="'+esc(i.url)+'"><div class="cov">'+cover(i)+'<div class="badges">'+typeB(i)+zoneBadge(i)+'</div></div><div class="in">'+tagRow(i)+'<h3>'+esc(i.title)+'</h3>'+subjHtml(i,3,false)+(i.desc?'<p>'+esc(i.desc)+'</p>':'')+'<div class="pr">'+priceHtml(i)+'</div><span class="go">اكتشف التفاصيل '+arrow+'</span></div></a>'}).join("");
 g("zones-grid").innerHTML=(D.zones||[]).map(function(z){
 return'<a class="zone" href="'+esc(z.url)+'"><div class="cov">'+cover(z)+'</div><div class="ov"><h3>'+esc(z.name)+'</h3><span class="go">استكشف الزون '+arrow+'</span></div></a>'}).join("");
 function money(n){return Number(n).toLocaleString("en-US")}
@@ -493,7 +533,7 @@ function subjHtml(i,max,lbl){var a=i.subjects||[];if(!a.length)return'';var sh=a
 function cardHtml(i,kind){
 var m=[];if(i.start)m.push('<span>'+I('cal')+'يبدأ '+esc(i.start)+'</span>');if(i.duration)m.push('<span>'+I('clock')+'المدة '+esc(i.duration)+'</span>');if(i.hours)m.push('<span>'+I('clock')+esc(i.hours)+' ساعة</span>');if(i.lessons)m.push('<span>'+I('play')+esc(i.lessons)+'</span>');
 var subj=subjHtml(i,5,true);
-return'<article class="card" data-kind="'+kind+'" data-id="'+i.id+'"><div class="cov">'+cover(i)+'<div class="badges">'+typeB(i)+(i.isNew?newB:'')+'</div></div><div class="in">'+tagRow(i,kind)+'<h3><a href="'+esc(i.url)+'">'+esc(i.title)+'</a></h3>'+subj+(i.desc?'<p class="d">'+esc(i.desc)+'</p>':'')+(m.length?'<div class="meta">'+m.join("")+'</div>':'')+''+cpHtml(i)+'<div class="pr">'+priceHtml(i)+'</div><div class="ac"><button class="btn b-out add">إضافة إلى السلة</button><button class="btn b-pri buy">'+(Number(i.price)===0?'ابدأ الآن مجانًا':'شراء مباشر')+'</button></div></div></article>'}
+return'<article class="card" data-kind="'+kind+'" data-id="'+i.id+'"><div class="cov">'+cover(i)+'<div class="badges">'+typeB(i)+zoneBadge(i)+'</div></div><div class="in">'+tagRow(i,kind)+'<h3><a href="'+esc(i.url)+'">'+esc(i.title)+'</a></h3>'+subj+(i.desc?'<p class="d">'+esc(i.desc)+'</p>':'')+(m.length?'<div class="meta">'+m.join("")+'</div>':'')+''+cpHtml(i)+'<div class="pr">'+priceHtml(i)+'</div><div class="ac"><button class="btn b-out add">إضافة إلى السلة</button><button class="btn b-pri buy">'+(Number(i.price)===0?'ابدأ الآن مجانًا':'شراء مباشر')+'</button></div></div></article>'}
 var all={};
 function mount(id,list,kind){list=list||[];list.forEach(function(i){all[kind+i.id]=i});g(id).innerHTML=list.map(function(i){return cardHtml(i,kind)}).join("")}
 mount("t-classes",D.classes,"class");mount("t-courses",D.courses,"course");
